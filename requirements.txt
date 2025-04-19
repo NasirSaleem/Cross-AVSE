@@ -1,0 +1,15 @@
+decord==0.6.0
+numpy==1.22.0
+opencv_contrib_python
+opencv_python
+opencv_python_headless
+pytorch_lightning==1.8.0
+scipy
+SoundFile
+torch
+tqdm
+
+
+python train.py --log_dir ./logs --batch_size 4 --lr 0.001 --gpus 1 --max_epochs 5 --attention_layers 3
+
+python test.py --ckpt_path "C:\Nasir Saleem Data\New Model\logs\avse\version_0\checkpoints\best-epoch=003-val_loss=3.946.ckpt" --save_root enhanced --model_uid avse --dev_set True --eval_set False --cpu False
